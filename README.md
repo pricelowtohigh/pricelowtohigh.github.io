@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# pricelowtohigh.github.io
+
+My "personal" website that I created before becoming serious about learning to code. Uses only the basic fuctions of HTML.
+
+I have started to rebuild it in React and plan to add additional functionality and styling. Would also like to add some fun user-customizable options such as a "sign-in" page that allows site visitors to write their name and permanently displays it on the page.
+>>>>>>> ef89ae1036f9c88d61360dbe41d345b6720bc7c5
