@@ -50,9 +50,9 @@ function Home() {
 
 
     return (
-        <div class="container">
-            <div class="col">
-                <div class="row">
+        <div className="container">
+            <div className="col">
+                <div className="row">
                     <img onClick={clickHandler} src={imageArray[imageNumber]}/>
                     <a style={{textDecoration: 'none', color: 'black', textAlign: 'center'}} href="/">click here!.</a>
                 </div>

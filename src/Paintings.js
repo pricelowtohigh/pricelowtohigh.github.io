@@ -12,7 +12,7 @@ const giveHerPadding = {
 
   return (
     <div className="container mb-4" style={giveHerPadding}>
-      <div class="row">
+      <div className="row">
           <img src={greatPain} className="container-fluid" style={giveHerPadding}/>
           <p>suffering</p>
           <img src={floatingCross} className="container-fluid" style={giveHerPadding}/>

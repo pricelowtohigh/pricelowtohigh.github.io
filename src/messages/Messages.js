@@ -6,10 +6,7 @@ function Messages() {
     const URL = process.env.REACT_APP_API_BASE_URL;
     const [messages, setMessages] = useState([]);
     const [errors, setErrors] = useState(null);
-
-    const giveHerPadding = {
-        padding: '25px 15px 0px 0px'
-        }
+    const giveHerPadding = { padding: '25px 15px 0px 0px' };
 
     useEffect(() => {
         const abortController = new AbortController();
@@ -28,9 +25,9 @@ function Messages() {
         return () => abortController.abort();
     }, [])
 
-    const messagesArray = messages.map((message) => {
+    const messagesArray = messages.map((message, index) => {
         return (
-            < MessagesList message = {message} />
+            < MessagesList message = {message} key = {message.message_id} />
         )
     });
     
