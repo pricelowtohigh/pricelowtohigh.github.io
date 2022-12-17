@@ -2,11 +2,12 @@ import React from 'react';
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Header from './Header';
 import Paintings from './Paintings';
+import Messages from './messages/Messages';
 import Home from './Home';
 import './App.css';
 
 function App() {
-  console.log("hello")
+  
   return (
     <>
     <Header />
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/paintings" element={<Paintings/>}/>
+            <Route path="/messages" element={<Messages/>}/>
           </Routes>
       </BrowserRouter>
     </>

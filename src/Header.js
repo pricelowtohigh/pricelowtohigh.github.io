@@ -10,6 +10,7 @@ function Header() {
               <nav className=" navbar navbar-expand-lg bg-light">
                 <a class="nav-link" aria-current="page" href="/">Home</a>
                 <a class="nav-link" href="/paintings">Paintings</a>
+                <a class="nav-link" href="/messages">Messages</a>
                 <a class="nav-link" href="/">Something else eventually, for right now also Home</a>
               </nav>
             </div>
