@@ -1,26 +1,49 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export function MessageForm () {
-    const [ formData, setFormData ] = useState([]);
+    const URL = process.env.REACT_APP_API_BASE_URL;
+    const [ errors, setErrors] = useState(null);
     const navigate = useNavigate();
+    const initialFormState = {
+        author: "",
+        message: "",
+    }
+    const [ formData, setFormData ] = useState( initialFormState );
 
-    function handleChange (   ) {
-        // update formData
+    const handleChange = (event) => {
+        event.preventDefault();
+        setFormData({
+            ...formData,
+            [event.target.name]: event.target.value
+        })
+        console.log(formData)
     }
 
-    function handleSubmit (  ) {
+    const handleSubmit = async ( event ) => {
+        event.preventDefault();
+        try {
+            setErrors(null);
+            console.log("POST request here")
+            //await axios.post(URL + "/messages")
+            setFormData(initialFormState)
+            navigate("/messages")
+
+        } catch (error) {
+            setErrors(error.response.data.error);
+        }
         // axios.post
     }
 
     return (
         <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="your-name">Your Name:</label>
+          <label htmlFor="author">Your Name:</label>
           <input
-            name="your-name"
+            name="author"
             type="text"
-            id="your-name"
+            id="author"
             placeholder="Your Name"
             required={true}
             value={formData.author}
