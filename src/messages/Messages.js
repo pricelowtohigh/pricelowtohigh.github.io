@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { MessagesList } from "./MessagesList";
+import { MessageForm } from "./MessageForm";
 import axios from 'axios'
 
 function Messages() {
@@ -33,7 +34,10 @@ function Messages() {
     
     return (
         <div className="container mb-4" style={giveHerPadding}>
-            {messagesArray}
+            <div>
+                < MessageForm />
+            </div>
+            <div>{messagesArray}</div>
         </div>
     );
 }
